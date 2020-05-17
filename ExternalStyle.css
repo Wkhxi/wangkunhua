@@ -1,0 +1,88 @@
+/*外部样式表*/
+
+*{
+    /*外边距：当两个元素没有重合时之间的距离*/
+    margin:0;
+    /*内边距：当两个元素有重合时之间的距离*/
+    padding: 0;
+}
+body{
+    background: rgb(244,244,246);
+
+    padding-top: 44px; /*body整体向下移动*/
+    padding-bottom: 60px;
+}
+
+/*定位：绝对定位，相对定位
+第一。确定元素位置：（x，y）
+第二。确定元素宽高
+第三。加个螺丝钉
+第四。把被遮挡的元素露出来
+*/
+header{
+    background: rgb(40,133,202);
+    color: white;
+    text-align: center;
+    line-height: 44px;
+    font-size: 18px;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    position: fixed;
+
+    /*调节页面层次到最顶部*/
+    z-index: 999;
+}
+
+.DS_second_section img{
+    width:100%;
+    margin-bottom:-6px; /*下外边距*/
+
+}
+
+.IP_third_section img{
+    width: 100%;
+    /*margin-bottom: -6px;*/
+}
+
+.SP_second_section img{
+    width: 100%;
+}
+.SP_third_section img{
+    width: 100%;
+}
+
+.PP_second_section img{
+    width: 100%;
+}
+
+
+
+footer{
+    display:table;
+    width: 100%;
+    background: black;
+    height: 60px;
+    font-size: 14px;
+
+    left: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+footer a{
+    display: table-cell;
+    width: 20%;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+
+    text-decoration: none; /*去掉下划线*/
+
+}
+
+footer a span{
+    display: block;
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--适配手机模式-->
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <!--标题头小图标-->
+    <link rel="short icon" href="Resource/icon.png">
+    <!--让某个样式表控制html-->
+    <link rel="stylesheet" href="ExternalStyle.css">
+
+    <script type="text/javascript" src="Method.js"></script>
+
+    <title>王堃华</title>
+    <style>
+        .L_external_div{
+            width: 100%;
+            height: 150px;
+            position: relative;
+        }
+
+        .L_inner_div{
+            left: 50%; /*左上角为参考点，左上角处于正中间*/
+            top: 50%;
+            width: 60px;
+            height: 60px;
+
+            margin-top: -30px;
+            margin-left: -30px; /*距离左边的边距减少33，相当于左移33*/
+            position: absolute;
+
+            background: rgb(244,244,246);
+        }
+
+        /*.L_form{*/
+            /*width: 100%;*/
+            /*background: rgb(244,244,246);*/
+        /*}*/
+        /*.L_form_div{*/
+            /*width: 90%;*/
+            /*background: white;*/
+
+            /*!*height和line_height高度设置成一样，使得文字竖直居中*!*/
+            /*height: 100px;*/
+            /*line-height: 50px;*/
+
+            /*!*内部小div水平居中*!*/
+            /*margin: 0 auto;*/
+
+            /*border: 1px solid #cccccc;*/
+            /*!*边角*!*/
+            /*border-radius: 5px;*/
+        /*}*/
+
+        /*.L_form_div span{*/
+            /*margin-left: 20px;*/
+            /*font-weight: bold;*/
+        /*}*/
+
+        /*.L_form_div_button{*/
+            /*width: 90%;*/
+            /*height: 50px;*/
+            /*background: blue;*/
+
+
+
+            /*margin: 20px auto;*/
+            /*border-radius: 10px;*/
+        /*}*/
+        /*.L_form_div_button_1{*/
+            /*width: 100%;*/
+            /*height: 100%;*/
+            /*background: rgb(33,90,163);*/
+            /*border-radius: 10px;*/
+
+            /*font-weight: bold;*/
+            /*font-size: large;*/
+            /*color: white;*/
+        /*}*/
+        .L_from_div{
+            width: 100%;
+        }
+        .L_form_inner_div{
+            width: 90%;
+            background: white;
+
+            height: 100px;
+            margin: 0 auto;
+            border:  1px solid #cccccc;
+            border-radius: 5px;
+
+        }
+        .L_form_inner_div_1{
+            line-height: 50px;
+            border-bottom:  1px solid #cccccc;
+        }
+        .L_form_inner_div div{
+            line-height: 50px;
+        }
+        .L_form_inner_div span{
+            padding-left: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        input{
+            /*去掉点击input时显示的边框*/
+            outline: medium;
+            /*去掉边框*/
+            border: none;
+        }
+
+        .L_login_div{
+            width: 100%;
+        }
+
+        .L_login_inner_div{
+            width: 90%;
+            height: 50px;
+            background: rgb(36,92,161);
+            border-radius: 10px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .L_login_inner_div input{
+
+            width: 90%;
+            background: rgb(36,92,161);
+            /*字体颜色*/
+            color: white;
+            font-size: 20px;
+            line-height: 50px;
+            height: 50px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<header>
+
+    <span>登录</span>
+
+</header>
+
+<div class="L_external_div">
+    <div class="L_inner_div">
+        <img class="L_head_img" src="Resource/head.png" alt="">
+    </div>
+</div>
+
+
+<script>
+    // // 函数声明
+    // function gainSum(var a,var b) {
+    //     var c = a + b;
+    //     return c;
+    // }
+    // // 函数表达式
+    // var bb = function (a,b) {
+    //     var cc = a+ b;
+    //     return cc;
+    // }
+
+
+
+</script>
+
+
+<!--<form class="L_form" action="">-->
+    <!--<div class="L_form_div">-->
+        <!--<span>账号名：</span>-->
+        <!--<input style="border:0px;outline:none;cursor:pointer;" type="text" id="L_account"><br>-->
+
+        <!--<hr style="height:1px;border:none;border-top:1px solid #cccccc;" />-->
+
+        <!--<span>密码：</span>-->
+        <!--<input style="border:0px;outline:none;cursor:pointer;" type="password" id="L_pwd"><br>-->
+    <!--</div>-->
+    <!--<div class="L_form_div_button">-->
+        <!--<input class="L_form_div_button_1" type="button" value="登录" id="L_btn">-->
+
+    <!--</div>-->
+
+</form>
+
+<form action="">
+    <div class="L_from_div">
+        <div class="L_form_inner_div">
+            <div class="L_form_inner_div_1">
+                <span>账号名：</span>
+                <input type="text" id="L_account"><br>
+            </div>
+            <div>
+                <span>密码：</span>
+                <input type="password" id="L_pwd"><br>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="L_login_div">
+        <div class="L_login_inner_div">
+            <input type="button" value="登录" id="L_btn">
+        </div>
+
+    </div>
+
+
+</form>
+
+<script>
+    var btn = document.querySelector("#L_btn");
+    btn.onclick = function () {
+        var userName = encodeURIComponent(document.querySelector("#L_account").value);
+        var passWord = encodeURIComponent(document.querySelector("#L_pwd").value);
+
+        var part3 = "username=" +userName+"&pwd="+passWord;
+
+        requestMethod("post","login",part3,function (returnStr) {
+            if(returnStr == "登录成功"){
+
+                window.localStorage.setItem("userName",userName);
+                window.location.href = "DropletService.html";
+            }
+            else{
+                alert(returnStr);
+            }
+
+        })
+
+        // var str = requestMethod("post","login",part3);
+        //
+        // if(str == "登录成功"){
+        //
+        //     window.localStorage.setItem("userName",userName);
+        //     window.location.href = "DropletService.html";
+        // }
+        // else{
+        //     alert(str);
+        // }
+    }
+</script>
+
+
+
+
+<!--<script>-->
+    <!--var btn = document.querySelector("#L_btn");-->
+    <!--btn.onclick = function(){-->
+
+         <!--var userName = encodeURIComponent(document.querySelector("#L_account").value);-->
+         <!--var passWord = encodeURIComponent(document.querySelector("#L_pwd").value);-->
+
+         <!--//第一步：创建请求对旬xhr-->
+         <!--var xhr = new XMLHttpRequest();-->
+
+         <!--//第二步：建立与服务器的连接（get/post）-->
+        <!--xhr.open('post','https://mockapi.eolinker.com/2ZhGVxjacb39010e6753bd9c02ee803e6e3bfeab6e8007c/login');-->
+
+        <!--//设置头信息，让数据以表单的形式传递给服务器-->
+        <!--xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");-->
+
+        <!--//第三步：发送请求-->
+        <!--xhr.send("username=" +userName+"&pwd="+passWord);-->
+
+        <!--//接收数据服务器返回的数据-->
+        <!--xhr.onreadystatechange = function () {-->
+
+            <!--//xhr.readyState == 4 代表ajax数据请求已经完成-->
+            <!--//xhr.readyState == 200 代表数据成功返回-->
+            <!--if(xhr.readyState == 4 && xhr.status == 200){-->
+                <!--//response.Text表示服务器返回的数据-->
+                <!--var res = JSON.parse(xhr.responseText);-->
+                <!--var str = res.data;  //解码-->
+
+                <!--if (str == "登录成功"){-->
+
+                    <!--window.localStorage.setItem("userName",userName);//页面间缓存-->
+
+                    <!--window.location.href = "DropletService.html";-->
+
+                <!--}-->
+                <!--else{-->
+                    <!--alert(str);-->
+
+
+                <!--}-->
+            <!--}-->
+        <!--}-->
+
+
+        <!--// var account = encodeURIComponent(document.querySelector("#L_account").value);-->
+        <!--// var password = encodeURIComponent(document.querySelector("#L_pwd").value);-->
+        <!--//-->
+        <!--// if(account == "hskj" && password == "123456"){-->
+        <!--//     window.location.href = "DropletService.html";-->
+        <!--// }-->
+        <!--// else{-->
+        <!--//     window.location.href = "http://www.huashankeji.com";-->
+        <!--// }-->
+
+    <!--}-->
+<!--</script>-->
+
+</body>
+</html>
